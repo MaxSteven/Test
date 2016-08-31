@@ -21,7 +21,7 @@ function buildUI (thisObject)
 			//alert( myWindow) ;
 			
 			//------------UI--------------------------
-				myWindow.myPanel = myWindow.add("Panel"); //Panel have frame while group is not
+				myWindow.myPanel = myWindow.add("panel"); //Panel have frame while group is not
 				myWindow.myPanel.orientation = "row"; // orientation inside panel
 
 				myWindow.myPanel.okButton = myWindow.myPanel.add("button");
@@ -36,9 +36,11 @@ function buildUI (thisObject)
 			//------------Function--------------------------
 				myWindow.myPanel.okButton.onClick = function () 
 					{
-						var myLayer = app.project.activeItem.layer(1);
-						myLayer.position.setValue([0,0]);
-						alert("OK");
+						var file = new File('/E/Nguyen/Stuffs/AE Scipts/OftenUsed/___________TEST.jsx');
+						            file.open("r");
+						            eval( file.read() );
+						            file.close();
+
 						myWindow.close();
 					}
 
